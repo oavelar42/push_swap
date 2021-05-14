@@ -7,4 +7,4 @@ instructions to manipulate both stacks.
 on the standard output the smallest program using Push_swap instruction language that
 sorts the integer arguments received.
 
-<a href=“https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a/“>Push Swap</a>
+<a href=“http://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a/“>Push Swap</a>
