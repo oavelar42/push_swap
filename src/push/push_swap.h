@@ -13,6 +13,8 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include "./libft/libft.h"
+#include "../../libft/libft.h"
+
+void  parse_argv(char *arg, t_list **a, int *bonus_opt);
 
 #endif

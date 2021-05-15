@@ -61,7 +61,7 @@ $(NAME_SW): $(OBJS_SW)
 clean:
 										@make clean -C $(LIB)
 										@rm -f $(OBJS)
-										@echo "$(YELLOW)[Proyect objects removed]$(COLOR_OFF)"
+										@echo "$(YELLOW)[Objects removed]$(COLOR_OFF)"
 
 fclean: clean
 										@make fclean -C $(LIB)
