@@ -1,12 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_stack.c                                       :+:      :+:    :+:   */
+/*   list_function.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/18 16:24:03 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/19 19:20:28 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
+
+void	insert_end(t_stack **all, int value)
+{
+	t_stack	*new;
+	t_stack	*curr;
+
+	new = malloc(sizeof(t_stack));
+	if (new == NULL)
+		ft_the_end("MEMORY ERROR\n");
+	new->next NULL;
+	new->value = value;
+	new->pol = -1;
+	if (*all == NULL)
+	{
+		*all = new;
+		return ;
+	}
+	curr = *all;
+	while (curr->next != NULL)
+		curr = curr->next;
+	curr->next = new;
+}
+
+int		ft_count(t_stack *list)
+{
+	if (list == NULL)
+		return (0);
+	return (1 + ft_count(list->next));
+}
