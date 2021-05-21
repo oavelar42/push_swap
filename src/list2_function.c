@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/19 19:25:33 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/21 16:01:10 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int     ft_okay(t_stack *a, t_stack *b, int init_len)
             if (a->value < prev)
                 return (1);
             prev = a->value;
-            a = a->next
+            a = a->next;
         }
     }
     return (0);

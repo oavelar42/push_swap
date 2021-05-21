@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 14:45:28 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/19 19:26:13 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/21 16:14:47 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int   main(int ac, char **av)
     b = NULL;
     if (ac == 1 || (ac == 2 && !ft_strncmp(av[1], "-v", 3)))
         return (0);
-    ft_on_off(&i, &sg. av);
+    ft_on_off(&i, &sg, av);
     if (check_input(ac - i, av + i))
         return (1);
     parse_number(av, &a, ac, i);

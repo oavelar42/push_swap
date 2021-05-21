@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate.c                                         :+:      :+:    :+:   */
+/*   mid_point.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/18 22:23:13 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/21 16:12:59 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int validate_input(int ac, char **av)
+void    sort_list(t_stack *list, t_stack **sort_point, int pol)
 {
-    int ret;
-
-    ret = 0;
-    if (ac < 3 || ft_found(ac, av))
-        return (ret);
-    ret = 1;
-    return (ret);
+    *sort_point = NULL;
+    insert_sort(sort_point, list->value);
+    while (list->next != NULL && list->pol == pol)
+    {
+        list = list->next;
+        if (list->pol == pol)
+            insert_sort(sort_point, list->value);
+        else
+            break ;
+    }
 }

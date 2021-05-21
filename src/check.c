@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/19 19:04:51 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/21 15:57:13 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		check_input(int ac, char **s)
 			b++;
 		while (ft_isdigit(s[a][b]))
 			b++;
-		if (b != count || count > 11 || len ==0
+		if (b != count || count > 11 || count == 0
 			|| ft_itoa(s[a]) > 2147483647 || ft_itoa(s[a])< - 2147483648)
 		{
 			write(2, "ERROR\n", 6);
