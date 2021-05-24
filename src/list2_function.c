@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/21 16:01:10 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/24 16:49:24 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,13 @@ void    ft_unallocate(t_stack **all)
         free(aux);
     }
     *all = NULL;
+}
+
+int     ft_count_pol(t_stack *list, int pol)
+{
+    if (list == NULL || list->pol != pol)
+        return (0);
+    return (1 + ft_count_pol(list->next, pol));
 }
 
 int     ft_okay(t_stack *a, t_stack *b, int init_len)
