@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_op.c                                         :+:      :+:    :+:   */
+/*   move_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/18 21:46:46 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/24 22:33:23 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void  make_stack(int ac, char **av, my_stack **start)
+void    push_other(t_stack **from, t_stack **to)
 {
-    my_stack    *new = NULL;
-    my_stack    *end = NULL;
-    int         i;
+    t_stack *move;
 
-    new = new_node(ft_atoi(av[1]));
-    *start = end = new;
-    i = 2;
-    while (i < ac)
-    {
-        new = new_node(ft_atoi(av[1]));
-        end = append(end, new);
-        i++;
-    }
+    if (*from == NULL)
+        return ;
+    move = *from;
+    *from = (*from)->next;
+    move->next = *to;
+    *to = move;
 }

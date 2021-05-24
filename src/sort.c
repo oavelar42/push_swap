@@ -6,11 +6,51 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/24 17:03:46 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/24 22:24:14 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void    push_half_a(t_stack **a, t_stack **b, int sg)
+{
+    int pol;
+
+    if (ft_count(*b) == 0)
+        return ;
+    pol = (*b)->pol;
+    pa_push_to_a(a, b, 1, sg);
+    if (count(*b) == 0)
+        return ;
+    while (((*b)->next != NULL) && (*b)->pol == pol)
+        pa_push_to_a(a, b, 1, sg);
+    if (ft_count(*b) == 1 && (*b)->pol == pol)
+        pa_push_to_a(a, b, 1, sg);
+}
+
+void    sort_b_with_sort(t_stack **a, t_stack **b, int sg)
+{
+    int med;
+    int pol;
+    int rot;
+
+    if (count_not_sort(*a) <= 3)
+    {
+        ft_sort_top_a(a, b, sg);
+        return ;
+    }
+    pol = (*a)->pol;
+    med = find_med_part(*a);
+    rot = 0;
+    while ((*a)->pol == pol)
+        rot += sort_b_push(a, b, med, sg);
+    while (rot)
+    {
+        rra_rotate_down(a, b, 1, sg);
+        rot--;
+    }
+    return (sort_b_with_sort(a, b, sg));
+}
 
 void    sort_b_first_time(t_stack **a, t_stack **b, int sg)
 {

@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/21 16:12:59 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/24 22:55:20 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,15 @@ void    sort_list(t_stack *list, t_stack **sort_point, int pol)
         else
             break ;
     }
+}
+
+int     count_not_sort(t_stack *list)
+{
+    if (list == NULL)
+        return (0);
+    while (list != NULL && list->pol == 0)
+        list = list->next;
+    if (list == NULL)
+        return (0);
+    return (1 + count_not_sort(list->next));
 }
