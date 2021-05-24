@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 11:07:35 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/24 22:55:15 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/24 23:05:33 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,11 @@ void	        insert_sort(t_stack **all, int value);
 void            parse_number(char **av, t_stack **a, int ac, int i);
 void            sort_list(t_stack *list, t_stack **sort_point, int pol);
 void	        insert_end(t_stack **all, int value);
+void            pa_push_to_a(t_stack **a, t_stack **b, int print, int sg);
 void            ft_unallocate(t_stack **all);
 void            push_other(t_stack **from, t_stack **to);
 void            sort(t_stack **a, t_stack **b, int sg);
 void            ft_on_off(int *i, int *sg, char **av);
 void            ft_the_end(char *s);
+
 #endif
