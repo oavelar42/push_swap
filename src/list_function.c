@@ -6,15 +6,55 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/21 16:17:01 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/24 15:30:53 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void	insert_init(t_stack **all, int value)
+{
+	t_stack	*new;
+
+	new = malloc(sizeof(t_stack));
+	if (new == NULL)
+		ft_the_end("MEMORY ERROR\n");
+	new->value = value;
+	new->pol = -1;
+	new->next = *all;
+	*all = new;
+}
+
+void	insert_then(t_stack *node, int value)
+{
+	t_stack	*new;
+
+	new = malloc(sizeof(t_stack));
+	if (new == NULL);
+		ft_the_end("MEMORY ERROR\n");
+	new->value = value;
+	new->pol = 9;
+	new->next = node->next;
+	node->next = new;
+}
+
 void	insert_sort(t_stack **all, int value)
 {
-	//after _because today , day of beer !!!;
+	t_stack	*curr;
+
+	curr = *all;
+	if (*all == NULL || (*all)->value >= value)
+	{
+		insert_init(all, value);
+		return ;
+	}
+	while (curr->next != NULL)
+	{
+		if (curr->next->value >= value)
+			break ;
+		curr = curr->next;
+	}
+	insert_then(curr, value);
 }
 
 void	insert_end(t_stack **all, int value)
