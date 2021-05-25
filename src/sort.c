@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/24 22:24:14 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/25 19:18:57 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,21 @@ void    push_half_a(t_stack **a, t_stack **b, int sg)
         pa_push_to_a(a, b, 1, sg);
     if (ft_count(*b) == 1 && (*b)->pol == pol)
         pa_push_to_a(a, b, 1, sg);
+}
+
+int     sort_b_push(t_stack **a, t_stack **b, int med, int sg)
+{
+    if ((*a)->value <= med)
+    {
+        pb_push_to_b(a, b, 1, sg);
+        return (0);
+    }
+    else
+    {
+        (*a)->pol *= -1;
+        ra_rotate_up(a, b, 1, sg);
+        return (1);
+    }
 }
 
 void    sort_b_with_sort(t_stack **a, t_stack **b, int sg)
