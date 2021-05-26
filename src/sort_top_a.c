@@ -6,11 +6,38 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 12:03:55 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/26 12:13:10 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/26 14:37:12 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void sort_top_three_a(t_stack **a, t_stack **b, int sg)
+{
+    int x;
+    int y;
+    int z;
+
+    x = (*a)->value;
+    y = (*a)->next->value;
+    z = (*a)->next->next->value;
+    if (x < y && y < z && x < z)
+    {
+        (*a)->pol = 0;
+        (*a)->next->pol = 0;
+        (*a)->next->next->pol = 0;
+    }
+    else if (x < y && y > z && x < z)
+        sort_a_one_three_two_a(a, b, sg);
+    else if (x > y && y < z && x < z)
+        sort_a_two_one_three_a(a, b, sg);
+    else if (x < y && y > z && x > z)
+        sort_a_two_three_one(a, b, sg);
+    else if (x > y && y < z && x > z)
+        sort_a_three_one_two(a, b, sg);
+    else if (x > y && y > z && x > z)
+        sort_a_three_two_one(a, b, sg);
+}
 
 void    sort_top_a(t_stack **a, t_stack **b, int sg)
 {

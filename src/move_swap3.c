@@ -6,11 +6,20 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 22:35:10 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/26 12:01:23 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/26 13:42:48 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void    sa_swap(t_stack *a, t_stack *b, int print, int sg)
+{
+    swap(a);
+    if (print)
+        write(1, "sa\n", 3);
+    if (sg)
+        print_stacks(a, b);
+}
 
 void    pa_push_to_a(t_stack **a, t_stack **b, int print, int sg)
 {
