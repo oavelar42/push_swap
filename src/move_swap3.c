@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 22:35:10 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/24 23:04:09 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/26 12:01:23 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,17 @@ void    pa_push_to_a(t_stack **a, t_stack **b, int print, int sg)
     push_other(b, a);
     if (print)
         write(1, "pa\n", 3);
+    if (sg)
+        print_stacks(*a, *b);
+}
+
+void    pb_push_to_b(t_stack **a, t_stack **b, int print, int sg)
+{
+    if (*a != NULL)
+        (*a)->pol *= -1;
+    push_other(a, b);
+    if (print)
+        write(1, "pb\n", 3);
     if (sg)
         print_stacks(*a, *b);
 }
