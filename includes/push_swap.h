@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 11:07:35 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/27 17:33:19 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 19:39:26 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,9 @@ void            rotate_up(t_stack **list);
 void            rr_rotate_up(t_stack **a, t_stack **b, int print , int sg);
 void            rra_rotate_down(t_stack **a, t_stack **b, int print, int sg);
 void            rrb_rotate_down(t_stack **a, t_stack **b, int print, int sg);
+void            rrr_rotate_down(t_stack **a, t_stack **b, int print, int sg);
 void            sa_swap(t_stack *a, t_stack *b, int print, int sg);
+void            sb_swap(t_stack *a, t_stack *b, int print, int sg);
 void            sort_a_one_three_two_a(t_stack **a, t_stack **b, int sg);
 void            sort_a_three_one_two(t_stack **a, t_stack **b, int sg);
 void            sort_a_three_two_one(t_stack **a, t_stack **b, int sg);
@@ -53,6 +55,7 @@ void	        insert_end(t_stack **all, int value);
 void            pb_push_to_b(t_stack **a, t_stack **b, int print, int sg);
 void            pa_push_to_a(t_stack **a, t_stack **b, int print, int sg);
 void            ft_unallocate(t_stack **all);
+void            ss_swap(t_stack *a, t_stack *b, int print, int sg);
 void            push_other(t_stack **from, t_stack **to);
 void            sort(t_stack **a, t_stack **b, int sg);
 void            sort_top_a(t_stack **a, t_stack **b, int sg);

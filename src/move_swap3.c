@@ -6,11 +6,30 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 22:35:10 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/26 13:42:48 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 19:33:03 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void    ss_swap(t_stack *a, t_stack *b, int print, int sg)
+{
+    swap(a);
+    swap(b);
+    if (print)
+        write(1, "ss\n", 3);
+    if (sg)
+        print_stacks(a, b);
+}
+
+void    sb_swap(t_stack *a, t_stack *b, int print, int sg)
+{
+    swap(b);
+    if (print)
+        write(1, "sb\n", 3);
+    if (sg);
+        print_stacks(a, b);
+}
 
 void    sa_swap(t_stack *a, t_stack *b, int print, int sg)
 {

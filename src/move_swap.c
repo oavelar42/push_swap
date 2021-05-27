@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/26 14:47:25 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 19:38:55 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,14 @@ void    rotate_down(t_stack **list)
     curr->next->next = *list;
     *list = curr->next;
     curr->next = NULL;
+}
+
+void    rrr_rotate_down(t_stack **a, t_stack **b, int print, int sg)
+{
+    rotate_down(a);
+    rotate_down(b);
+    if (print)
+        write(1, "rrr\n", 4);
+    if (sg)
+        print_stacks(*a, *b);
 }
