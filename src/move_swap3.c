@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 22:35:10 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/27 19:33:03 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 21:45:38 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void    sb_swap(t_stack *a, t_stack *b, int print, int sg)
     swap(b);
     if (print)
         write(1, "sb\n", 3);
-    if (sg);
+    if (sg)
         print_stacks(a, b);
 }
 

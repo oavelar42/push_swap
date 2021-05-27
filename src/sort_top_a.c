@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 12:03:55 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/26 14:37:12 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 21:58:14 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void sort_top_three_a(t_stack **a, t_stack **b, int sg)
         sort_a_three_two_one(a, b, sg);
 }
 
-void    sort_top_a(t_stack **a, t_stack **b, int sg)
+void    ft_sort_top_a(t_stack **a, t_stack **b, int sg)
 {
     if (count_not_sort(*a) == 0)
         ft_the_end("Something went wrong\n");

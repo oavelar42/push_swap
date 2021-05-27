@@ -6,11 +6,38 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/21 15:57:13 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 21:52:22 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+long	ft_atol(const char *s)
+{
+	long	sign;
+	double	result;
+
+	sign = 1;
+	result = 0;
+	while (*s == ' ' || (*s >= 9 && *s <= 13))
+		s++;
+	if (*s == '-' || *s == '+')
+	{
+		if (*s == '-')
+			sign = -1;
+		s++;
+	}
+	while (*s >= '0' && *s <= '9')
+	{
+		result = result * 10 + *s - '0';
+		if (sign == 1 && result < 0)
+			return (-1);
+		else if (sign == -1 && -result > 0)
+			return (0);
+		s++;
+	}
+	return ((long) sign * (long) result);
+}
 
 int		check_input(int ac, char **s)
 {
@@ -28,7 +55,7 @@ int		check_input(int ac, char **s)
 		while (ft_isdigit(s[a][b]))
 			b++;
 		if (b != count || count > 11 || count == 0
-			|| ft_itoa(s[a]) > 2147483647 || ft_itoa(s[a])< - 2147483648)
+			|| ft_atol(s[a]) > 2147483647 || ft_atol(s[a])< - 2147483648)
 		{
 			write(2, "ERROR\n", 6);
 			return (1);
@@ -60,7 +87,7 @@ int		check_list_dual(t_stack *sort_list)
 {
 	int		init;
 
-	if (count(sort_list) == 0)
+	if (ft_count(sort_list) == 0)
 		exit(0);
 	init = sort_list->value;
 	while (sort_list->next != NULL)

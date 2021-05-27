@@ -6,19 +6,11 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/24 16:49:24 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 21:56:15 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int sort_unallocate(t_stack **a, t_stack **b, int sg)
-{
-    sort(a, b, sg);
-    ft_unallocate(a);
-    ft_unallocate(b);
-    return (0);
-}
 
 void    ft_unallocate(t_stack **all)
 {

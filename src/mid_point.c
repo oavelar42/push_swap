@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/25 19:31:29 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 21:46:48 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int     find_med_part(t_stack *list)
 
     if (ft_count(list) == 0)
         return (0);
-    sort_list(list, part_sort, list->pol);
+    sort_list(list, &part_sort, list->pol);
     med = find_med(part_sort);
     ft_unallocate(&part_sort);
     return (med);

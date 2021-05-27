@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/25 19:18:57 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 21:58:38 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void    push_half_a(t_stack **a, t_stack **b, int sg)
         return ;
     pol = (*b)->pol;
     pa_push_to_a(a, b, 1, sg);
-    if (count(*b) == 0)
+    if (ft_count(*b) == 0)
         return ;
     while (((*b)->next != NULL) && (*b)->pol == pol)
         pa_push_to_a(a, b, 1, sg);
