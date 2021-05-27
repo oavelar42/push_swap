@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 11:07:35 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/26 15:34:04 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/27 17:33:19 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,12 @@ void	        insert_sort(t_stack **all, int value);
 void            parse_number(char **av, t_stack **a, int ac, int i);
 void            print_stacks(t_stack *a, t_stack *b);
 void            ra_rotate_up(t_stack **a, t_stack **b, int print, int sg);
+void            rb_rotate_up(t_stack **a, t_stack **b, int print, int sg);
 void            rotate_down(t_stack **list);
 void            rotate_up(t_stack **list);
+void            rr_rotate_up(t_stack **a, t_stack **b, int print , int sg);
 void            rra_rotate_down(t_stack **a, t_stack **b, int print, int sg);
+void            rrb_rotate_down(t_stack **a, t_stack **b, int print, int sg);
 void            sa_swap(t_stack *a, t_stack *b, int print, int sg);
 void            sort_a_one_three_two_a(t_stack **a, t_stack **b, int sg);
 void            sort_a_three_one_two(t_stack **a, t_stack **b, int sg);
