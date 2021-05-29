@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/10 11:09:35 by oavelar           #+#    #+#              #
-#    Updated: 2021/05/27 21:44:49 by oavelar          ###   ########.fr        #
+#    Updated: 2021/05/29 12:15:43 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ RED						:= \033[1;31m
 YELLOW				    := \033[1;33m
 COLOR_OFF			    := \033[0m
 
-all: $(NAME1) $(NAME2) $(NAME3)
+all: $(NAME1) $(NAME2)
 
 $(NAME1): $(SRCS) $(CH_SRCS)
 						@echo "$(BLUE)[Building libraries...]$(COLOR_OFF)"

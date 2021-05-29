@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/27 21:46:08 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/05/29 11:56:50 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	insert_end(t_stack **all, int value)
 	curr->next = new;
 }
 
-int		ft_count(t_stack *list)
+int	ft_count(t_stack *list)
 {
 	if (list == NULL)
 		return (0);
