@@ -31,7 +31,6 @@ SRCS		= ft_memset.c \
 			  ft_strcpy.c \
 			  ft_strcmp.c \
 				ft_abs.c \
-				ft_atod.c \
 				ft_count_digit.c \
 				ft_min.c \
 				ft_max.c \
