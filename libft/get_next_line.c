@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 09:30:45 by oavelar           #+#    #+#             */
-/*   Updated: 2021/06/24 21:44:32 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/06/24 15:49:21 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_ret(char **line, char **next, char *aux_ptr)
 {
-	char			*aux;
+	char	*aux;
 
 	if (aux_ptr)
 	{

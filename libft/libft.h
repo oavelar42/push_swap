@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oavelar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 11:07:35 by oavelar           #+#    #+#             */
-/*   Updated: 2021/06/24 21:30:39 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/04/10 14:47:38 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # endif
 
 # ifndef OPEN_MAX
-#  define OPEN_MAX	256
+#  define OPEN_MAX	1024
 # endif
 
 typedef struct s_list

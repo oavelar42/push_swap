@@ -66,7 +66,7 @@ int	get_input(t_stack **a, t_stack **b, int sg)
 			free(line);
 			ft_unallocate(a);
 			ft_unallocate(b);
-			write(2, "ERROR\n", 6);
+			write(2, "Error\n", 6);
 			return (1);
 		}
 		if (ret == -1)

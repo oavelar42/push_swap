@@ -57,7 +57,7 @@ int	check_input(int ac, char **s)
 		if (b != count || count > 11 || count == 0
 			|| ft_atol(s[a]) > 2147483647 || ft_atol(s[a]) < -2147483648)
 		{
-			write(2, "ERROR\n", 6);
+			write(2, "Error\n", 6);
 			return (1);
 		}
 		a++;
@@ -95,7 +95,7 @@ int	check_list_dual(t_stack *sort_list)
 		sort_list = sort_list->next;
 		if (init == sort_list->value)
 		{
-			write(2, "ERROR\n", 6);
+			write(2, "Error\n", 6);
 			return (1);
 		}
 		init = sort_list->value;

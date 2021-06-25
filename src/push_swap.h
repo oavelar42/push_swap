@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include "../libft/libft.h"
+# include "../simple_debug/simple_debugs.h"
 
 typedef struct s_stack
 {

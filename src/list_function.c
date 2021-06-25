@@ -18,7 +18,7 @@ void	insert_init(t_stack **all, int value)
 
 	new = malloc(sizeof(t_stack));
 	if (new == NULL)
-		ft_the_end("MEMORY ERROR\n");
+		ft_the_end("Memory Error\n");
 	new->value = value;
 	new->pol = -1;
 	new->next = *all;
@@ -31,7 +31,7 @@ void	insert_then(t_stack *node, int value)
 
 	new = malloc(sizeof(t_stack));
 	if (new == NULL)
-		ft_the_end("MEMORY ERROR\n");
+		ft_the_end("Memory Error\n");
 	new->value = value;
 	new->pol = 9;
 	new->next = node->next;
@@ -64,7 +64,7 @@ void	insert_end(t_stack **all, int value)
 
 	new = malloc(sizeof(t_stack));
 	if (new == NULL)
-		ft_the_end("MEMORY ERROR\n");
+		ft_the_end("Memory Error\n");
 	new->next = NULL;
 	new->value = value;
 	new->pol = -1;
