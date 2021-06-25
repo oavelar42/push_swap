@@ -42,7 +42,7 @@ static void	sort_top_three_a(t_stack **a, t_stack **b, int sg)
 void	ft_sort_top_a(t_stack **a, t_stack **b, int sg)
 {
 	if (count_not_sort(*a) == 0)
-		ft_the_end("Something went wrong\n");
+		ft_the_end("Something wrong\n");
 	else if (count_not_sort(*a) == 1)
 		(*a)->pol = 0;
 	else if (count_not_sort(*a) == 2)
