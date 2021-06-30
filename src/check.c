@@ -6,61 +6,42 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 12:01:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/06/21 21:33:32 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/06/30 10:39:49 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long	ft_atol(const char *s)
+int	check_input(int sg, char **str)
 {
-	long	sign;
-	double	result;
-
-	sign = 1;
-	result = 0;
-	while (*s == ' ' || (*s >= 9 && *s <= 13))
-		s++;
-	if (*s == '-' || *s == '+')
-	{
-		if (*s == '-')
-			sign = -1;
-		s++;
-	}
-	while (*s >= '0' && *s <= '9')
-	{
-		result = result * 10 + *s - '0';
-		if (sign == 1 && result < 0)
-			return (-1);
-		else if (sign == -1 && - result > 0)
-			return (0);
-		s++;
-	}
-	return ((long) sign * (long) result);
-}
-
-int	check_input(int ac, char **s)
-{
-	int		a;
-	int		b;
-	int		count;
+	int	a;
 
 	a = 0;
-	while (a < ac)
+	if (ft_strlen(str[a]) < 10)
+		return (0);
+	if (ft_strlen(str[a]) > 10)
+		return (1);
+	if (sg == 1 && ft_strcmp(str[a], "2147483647") > 0)
+		return (1);
+	if (sg == -1 && ft_strcmp(str[a], "2147483648") > 0)
+		return (1);
+	return (0);
+}
+
+int	ft_atol(char *str)
+{
+	int	i;
+	int	sg;
+
+	i = 0;
+	sg = 1 - 2 * (str[i] == '-');
+	if (str[i] && (str[i] == '+' || str[i] == '-'))
+		i++;
+	while (str[i])
 	{
-		b = 0;
-		count = ft_strlen(s[a]);
-		if (s[a][0] == '-')
-			b++;
-		while (ft_isdigit(s[a][b]))
-			b++;
-		if (b != count || count > 11 || count == 0
-			|| ft_atol(s[a]) > 2147483647 || ft_atol(s[a]) < -2147483648)
-		{
-			write(2, "Error\n", 6);
+		if (!ft_isdigit(str[i]) || check_input(sg, &str))
 			return (1);
-		}
-		a++;
+		i++;
 	}
 	return (0);
 }

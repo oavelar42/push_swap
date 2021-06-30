@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 11:07:35 by oavelar           #+#    #+#             */
-/*   Updated: 2021/05/29 12:13:48 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/06/30 10:42:07 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 # include "../libft/libft.h"
-# include "../simple_debug/simple_debugs.h"
+//# include "../simple_debug/simple_debugs.h"
 
 typedef struct s_stack
 {
@@ -28,7 +28,8 @@ int				ft_okay(t_stack *a, t_stack *b, int init_len);
 int				find_med_part(t_stack *list);
 int				check_dual(t_stack **a);
 int				check_list_dual(t_stack *sort_list);
-int				check_input(int ac, char **s);
+int				check_input(int sg, char **str);
+int				ft_atol(char *str);
 int				ft_count(t_stack *list);
 int				count_not_sort(t_stack *list);
 int				ft_count_pol(t_stack *list, int pol);

@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 14:45:28 by oavelar           #+#    #+#             */
-/*   Updated: 2021/06/24 15:48:35 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/06/30 10:40:02 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	sort_unallocate(t_stack **a, t_stack **b, int sg)
 	sort(a, b, sg);
 	ft_unallocate(a);
 	ft_unallocate(b);
-	check_leaks();
 	return (0);
 }
 
